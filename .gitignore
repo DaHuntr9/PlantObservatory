@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+#plantobservatory (react website)
+# dependencies
+plantobservatory/node_modules
+plantobservatory/.pnp
+plantobservatory/.pnp.js
+
+# testing
+plantobservatory/coverage
+
+# production
+plantobservatory/build
+
+# misc
+plantobservatory/.DS_Store
+plantobservatory/.env.local
+plantobservatory/.env.development.local
+plantobservatory/.env.test.local
+plantobservatory/.env.production.local
+
+plantobservatory/npm-debug.log*
+plantobservatory/yarn-debug.log*
+plantobservatory/yarn-error.log*
+
+plantobservatory/package-lock.json
