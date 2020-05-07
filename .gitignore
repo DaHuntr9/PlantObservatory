@@ -24,3 +24,7 @@ plantobservatory/yarn-debug.log*
 plantobservatory/yarn-error.log*
 
 plantobservatory/package-lock.json
+
+# backend (express server)
+backend/node_modules
+backend/package-lock.json
