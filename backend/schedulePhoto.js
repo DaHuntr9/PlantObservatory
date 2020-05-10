@@ -1,16 +1,28 @@
 /**
  * This section of code is directed exclusively for the 30 Min timers. 
  */
-const PiCamera = require('pi-camera');
-const schedule = require('node-schedule');
+import PiCamera from 'pi-camera';
+import { RecurrenceRule, scheduleJob as _scheduleJob } from 'node-schedule';
 
+
+
+/**
+ * This section of code is for the discord bot to be operated via. 
+ */
+// import { Client } from 'discord.js';
+// require('dotenv').config();
+// const bot = new Client();
+// const TOKEN = process.env.TOKEN;
+// bot.login(TOKEN);
+
+// Variables to be used for camera and file operations
 const fileName
 const myCamera
 
 // Create a Timer observer that checks to ensure that the time is in 30 min intervals. 
-var rule = new schedule.RecurrenceRule();
+var rule = new RecurrenceRule();
 rule.minute = [0,30,59];
-var scheduleJob = schedule.scheduleJob(rule, function(){
+var scheduleJob = _scheduleJob(rule, function(){
     console.log('Automatic Photo taken at' + Date.now());
     // Call functions to take photo and perhaps post something to a discord bot later. 
     takePhotoScheduled(fileName,myCamera);
